@@ -51,6 +51,7 @@ router.post('/', (req, res) => {
 // PUT api/users/1
 router.put('/:id', (req, res) => {
     User.update(req.body, {//UPDATE users SET username = "Lernantino", email = "lernantino@gmail.com", password = "newPassword1234"
+        individualHooks: true,
         where: { //WHERE id = 1;
             id: req.params.id
         }
