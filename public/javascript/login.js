@@ -40,7 +40,7 @@ async function loginFormHandler(event) {
             headers: { 'Content-Type': 'application/json' }
         })
         if (repsonse.ok) {
-            document.location.replace('/');
+            document.location.replace('/dashboard');
         } else {
             alert(response.statusText);
         }
